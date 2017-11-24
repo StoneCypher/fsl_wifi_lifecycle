@@ -10,7 +10,7 @@ machine_name     : "Wifi lifecycle";
 machine_author   : "John Haugeland <stonecypher@gmail.com>";
 machine_license  : MIT;
 machine_language : en;
-machine_version  : 1.0.0;
+machine_version  : 1.0.1;
 fsl_version      : 1.0.0;
 
 start_states     : [Disconnected];
@@ -26,7 +26,9 @@ Associated   'complete'   =>
 Completed    'connect'    =>
 Connected    'disconnect' => Disconnected;
 
-[Scanning Associating Associated Completed] 'fail' -> Disconnected;
+Disconnected => Associating;
+
+[Scanning Associating Associated Completed] 'fail' ~> Disconnected;
 ```
 
 ## Reference
