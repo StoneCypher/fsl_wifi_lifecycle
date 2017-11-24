@@ -1,11 +1,3 @@
-# fsl_wifi_lifecycle
-FSL implementation of the wifi lifecycle
-
-## Render
-![](./wifi_lifecycle.png)
-
-## Impl
-```fsl
 machine_name     : "Wifi lifecycle";
 machine_author   : "John Haugeland <stonecypher@gmail.com>";
 machine_license  : MIT;
@@ -27,9 +19,3 @@ Completed    'connect'    =>
 Connected    'disconnect' => Disconnected;
 
 [Scanning Associating Associated Completed] 'fail' -> Disconnected;
-```
-
-## Reference
-From [Data Mining Solves the Mystery of Your Slow Wi-fi Connection](https://www.technologyreview.com/s/603414/data-mining-solves-the-mystery-of-your-slow-wi-fi-connection/):
-
-![](./original.png)
